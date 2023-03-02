@@ -9,6 +9,9 @@ class Review:
         self._rating = rating
         # adding this instantiated instance to the restaurant's reviews list on creation
         self._restaurant.reviews.append(self)
+        self._customer.reviews.append(self)
+        self._customer.restaurants.append(self._restaurant)
+        self._restaurant.customers.append(self._customer)
         print(self._restaurant.reviews)
 
 
