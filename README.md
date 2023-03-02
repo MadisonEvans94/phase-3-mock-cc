@@ -64,9 +64,11 @@ here and the tests will pass, but you don't have to this time around!
 #### Customer
 
 - `Customer __init__(self, first_name, last_name)`
+  <!-- [x] -->
   - Customer should be initialized with a given name and family name, (i.e.,
     first and last name,
     like George Washington)"
+    <!-- [x] -->
 - `Customer property first_name()` and `Customer property last_name()`
   - Return first and last name, respectively
   - Names must be of type `str`
@@ -75,7 +77,9 @@ here and the tests will pass, but you don't have to this time around!
 #### Restaurant
 
 - `Restaurant __init__(self, name)`
+  <!-- [x] -->
   - Restaurants should be initialized with a name, as a string
+  <!-- [x] -->
 - `Restaurant property name()`
   - Returns the restaurant's name
   - Should not be able to change after the restaurant is created
@@ -83,9 +87,12 @@ here and the tests will pass, but you don't have to this time around!
 #### Review
 
 - `Review __init__(self, customer, restaurant, rating)`
+  <!-- [x] -->
   - Reviews should be initialized with a customer, restaurant, and a rating (a number)
 - `Review property rating()`
+  <!-- [x] -->
   - Returns the rating for a restaurant
+  <!-- [x] -->
   - Rating must be a number between 1 and 5, inclusive
 
 ### Object Relationships
@@ -128,6 +135,7 @@ here and the tests will pass, but you don't have to this time around!
 #### Restaurant
 
 - `Restaurant average_star_rating()`
+
   - Returns the average star rating for a restaurant based on its reviews
   - Reminder: you can calculate the average by adding up all the ratings and
     dividing by the number of ratings

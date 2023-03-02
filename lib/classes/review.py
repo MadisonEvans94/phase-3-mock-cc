@@ -4,23 +4,49 @@ from classes.restaurant import Restaurant
 class Review:
     
     def __init__(self, customer, restaurant, rating):
-        pass
+        self._customer = customer
+        self._restaurant = restaurant
+        self._rating = rating
+        # adding this instantiated instance to the restaurant's reviews list on creation
+        self._restaurant.reviews.append(self)
+        print(self._restaurant.reviews)
 
+
+    @property
     def customer(self):
-        # customer property goes here!
-        pass
+        return self._customer
     
- 
+    @customer.setter
+    def customer(self, customer):
+        if isinstance(customer, Customer):
+            self._customer = customer
+        else:
+            raise Exception("Customer error")
+        
+
+    @property
     def restaurant(self):
-        # restaurant property goes here!
-        pass
+        return self._restaurant
 
+    @restaurant.setter
+    def restaurant(self, restaurant):
+        if isinstance(restaurant, Restaurant):
+            self._restaurant = restaurant
+        else:
+            raise Exception("Restaurant error")
 
-
+    @property
     def rating(self):
-        # rating property goes here!
-        pass
+        return self._rating
 
+    @rating.setter
+    def rating(self, rating):
+        if rating > 0 and rating < 6:
+            self._rating = rating
+        else:
+            print("Your rating must be a number between 1 and 5, inclusive!")
+
+            raise Exception("Your rating must be a number between 1 and 5, inclusive!")
 
 
     def add_customer_to_restaurant(self):
